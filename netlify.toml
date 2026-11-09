@@ -1,0 +1,19 @@
+# Deploy demo. Artefak yang disajikan di sini sama dengan yang dipakai Docker
+# (apps/web/dist), lihat AGENTS.md §18.4.
+
+[build]
+  base = "apps/web"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Fallback saja. Route sekunder sudah punya HTML statis hasil prerender
+# (dist/kebijakan-privasi/index.html, dst), jadi crawler pratinjau tautan
+# WhatsApp tetap dapat markup walau tidak menjalankan JavaScript.
+# Redirect ini hanya menangkap path yang tidak diprerender.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

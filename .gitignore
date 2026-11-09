@@ -1,0 +1,36 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+build/
+.netlify/
+
+# cache
+.vite/
+.vite-react-ssg-temp/
+.cache/
+*.tsbuildinfo
+.eslintcache
+
+# environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# dokumen internal, docs, dan bahan persiapan: tidak ikut ter-commit
+*.md
+docs/
+preparation/
+mockups/

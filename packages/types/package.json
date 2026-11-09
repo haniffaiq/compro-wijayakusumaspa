@@ -1,0 +1,23 @@
+{
+  "name": "@wijaya/types",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kontrak tipe data bersama FE / BE / CRM",
+  "type": "module",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

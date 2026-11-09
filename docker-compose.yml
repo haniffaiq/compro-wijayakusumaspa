@@ -1,0 +1,17 @@
+# v1: hanya frontend statis. Service api dan db menyusul di fase 2
+# (AGENTS.md §18.1). Jangan tambahkan sekarang.
+services:
+  web:
+    build:
+      # Context sengaja root repo, bukan apps/web: build butuh package-lock.json
+      # root dan workspace packages/types.
+      context: .
+      dockerfile: apps/web/Dockerfile
+    image: wijaya-web
+    ports:
+      - '8080:80'
+    restart: unless-stopped
+
+# Fase 2 (belum dibuka, jangan diisi sebelum stack backend diputuskan):
+#   api:  apps/api  ->  butuh VITE_API_BASE_URL di apps/web/.env
+#   db:   database  ->  skema belum ditentukan

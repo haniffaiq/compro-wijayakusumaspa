@@ -1,0 +1,11 @@
+node_modules
+**/node_modules
+dist
+**/dist
+.vite-react-ssg-temp
+**/.vite-react-ssg-temp
+.git
+.env
+**/.env
+*.md
+mockups
